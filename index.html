@@ -10,18 +10,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <canvas id="neural-bg"></canvas>
 
-    <header id="main-header">
-        <div class="container">
-            <div class="logo">From Fear to Framework</div>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-brain"></i> From<span class="highlight">Fear</span>To<span
+                    class="highlight">Framework</span>
+            </div>
             <nav>
                 <button class="mobile-menu-toggle" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
@@ -30,6 +33,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#problem">The Problem</a></li>
                     <li><a href="#research">Research</a></li>
+                    <li><a href="#solution">Framework</a></li>
                     <li><a href="#bans-fail">Why Bans Fail</a></li>
                     <li><a href="#framework">Ethical Framework</a></li>
                     <li><a href="#action">What We Can Do</a></li>
@@ -43,42 +47,34 @@
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="container hero-content fade-in-up">
-                <div class="narrative-box">
-                    <p class="scenario"><em>Imagine this: It’s the night before your final exam. You’ve reviewed every
-                            note, watched every lecture, yet the concepts won't click. Panic sets in. Out of necessity,
-                            you open ChatGPT—not to cheat, but to learn. You ask it to explain concepts "like I'm five."
-                            Suddenly, the barrier breaks. You understand. The next morning, you take your exam
-                            confidently—not because AI took it for you, but because it helped you learn.</em></p>
-                </div>
 
-                <h1 class="main-headline fade-in-up delay-200">Generative AI is already in classrooms. <span
-                        class="highlight-text">The question is not whether it belongs—but how responsibly we guide
-                        it.</span></h1>
+                <h1 class="main-headline fade-in-up delay-200"><span id="typewriter-text"></span><span
+                        class="cursor">|</span></h1>
 
-                <p class="hero-claim fade-in-up delay-400">Higher education institutions must replace fear-based AI bans
-                    with ethical frameworks that include clear guidelines, teacher training, and AI literacy.</p>
+                <p class="hero-claim fade-in-up delay-400">Higher education must evolve. Replace fear-based bans with
+                    ethical guidelines, training, and literacy.</p>
 
                 <div class="why-matters-hero fade-in-up delay-600">
-                    <h3>Why This Matters</h3>
+                    <h3>// SYSTEM STATUS: UNDEFINED</h3>
                     <div class="matters-grid">
-                        <div class="matters-item">
+                        <div class="matters-item tilt-card">
                             <i class="fas fa-users"></i>
-                            <span><strong>Students already use AI.</strong></span>
+                            <span>Students Adapting</span>
                         </div>
-                        <div class="matters-item">
+                        <div class="matters-item tilt-card">
                             <i class="fas fa-university"></i>
-                            <span><strong>Institutions lack consistency.</strong></span>
+                            <span>Policies Lagging</span>
                         </div>
-                        <div class="matters-item">
-                            <i class="fas fa-exclamation-circle"></i>
-                            <span><strong>Without guidance, risks increase.</strong></span>
+                        <div class="matters-item tilt-card">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Risks Escalating</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="hero-actions fade-in-up delay-800">
-                    <a href="#research" class="btn btn-primary scroll-cue">See the Evidence <i
-                            class="fas fa-arrow-right"></i></a>
+                    <a href="#research" class="btn btn-primary scroll-cue">INITIALIZE PROTOCOL <i
+                            class="fas fa-terminal"></i></a>
                 </div>
             </div>
         </section>
