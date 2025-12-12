@@ -67,9 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
         constructor() {
             this.x = Math.random() * width;
             this.y = Math.random() * height;
-            this.vx = (Math.random() - 0.5) * 0.5;
-            this.vy = (Math.random() - 0.5) * 0.5;
+            this.vx = (Math.random() - 0.5) * 0.3; // Slower movement
+            this.vy = (Math.random() - 0.5) * 0.3;
             this.size = Math.random() * 2 + 1;
+            this.color = `rgba(37, 99, 235, ${Math.random() * 0.3})`; // Light Blue opacity
         }
 
         update() {
@@ -81,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         draw() {
-            ctx.fillStyle = 'rgba(102, 252, 241, 0.5)';
+            ctx.fillStyle = this.color;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initParticles() {
         particles = [];
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 40; i++) { // Fewer particles for cleaner look
             particles.push(new Particle());
         }
     }
@@ -110,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
                 if (distance < 150) {
-                    ctx.strokeStyle = `rgba(102, 252, 241, ${1 - distance / 150})`;
-                    ctx.lineWidth = 1;
+                    ctx.strokeStyle = `rgba(124, 58, 237, ${0.15 - (distance / 150) * 0.15})`; // Very subtle purple
+                    ctx.lineWidth = 0.5;
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
@@ -128,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     animateParticles();
 
-    // Typewriter Effect
-    const text = "Generative AI is here. >_";
+    // Typewriter Effect (Clean)
+    const text = "Generative AI in Education.";
     const typewriterElement = document.getElementById('typewriter-text');
     let i = 0;
 
@@ -137,12 +138,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (i < text.length) {
             typewriterElement.innerHTML += text.charAt(i);
             i++;
-            setTimeout(typeWriter, 100);
+            setTimeout(typeWriter, 80);
         }
     }
-
-    // Start typing after a short delay
     setTimeout(typeWriter, 500);
+
+    // Magnetic Button Effect
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0, 0)';
+        });
+    });
 
     // 3D Tilt Effect
     document.querySelectorAll('.tilt-card').forEach(card => {
@@ -154,10 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
 
-            const rotateX = ((y - centerY) / centerY) * -10; // Max 10deg rotation
-            const rotateY = ((x - centerX) / centerX) * 10;
+            const rotateX = ((y - centerY) / centerY) * -5; // Subtle rotate
+            const rotateY = ((x - centerX) / centerX) * 5;
 
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
         });
 
         card.addEventListener('mouseleave', () => {
