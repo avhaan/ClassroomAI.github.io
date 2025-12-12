@@ -42,43 +42,84 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
-            <div class="container">
-                <h1>Ethical AI in Higher Education</h1>
-                <p class="subtitle">Moving from Prohibition to Pedagogical Innovation</p>
-                <div class="hero-actions">
-                    <a href="#problem" class="btn btn-primary">Understand the Problem</a>
-                    <a href="#framework" class="btn btn-secondary">See the Framework</a>
+            <div class="container hero-content fade-in-up">
+                <div class="narrative-box">
+                    <p class="scenario"><em>Imagine this: It’s the night before your final exam. You’ve reviewed every
+                            note, watched every lecture, yet the concepts won't click. Panic sets in. Out of necessity,
+                            you open ChatGPT—not to cheat, but to learn. You ask it to explain concepts "like I'm five."
+                            Suddenly, the barrier breaks. You understand. The next morning, you take your exam
+                            confidently—not because AI took it for you, but because it helped you learn.</em></p>
+                </div>
+
+                <h1 class="main-headline fade-in-up delay-200">Generative AI is already in classrooms. <span
+                        class="highlight-text">The question is not whether it belongs—but how responsibly we guide
+                        it.</span></h1>
+
+                <p class="hero-claim fade-in-up delay-400">Higher education institutions must replace fear-based AI bans
+                    with ethical frameworks that include clear guidelines, teacher training, and AI literacy.</p>
+
+                <div class="why-matters-hero fade-in-up delay-600">
+                    <h3>Why This Matters</h3>
+                    <div class="matters-grid">
+                        <div class="matters-item">
+                            <i class="fas fa-users"></i>
+                            <span><strong>Students already use AI.</strong></span>
+                        </div>
+                        <div class="matters-item">
+                            <i class="fas fa-university"></i>
+                            <span><strong>Institutions lack consistency.</strong></span>
+                        </div>
+                        <div class="matters-item">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span><strong>Without guidance, risks increase.</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-actions fade-in-up delay-800">
+                    <a href="#research" class="btn btn-primary scroll-cue">See the Evidence <i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- The Problem -->
-        <section id="problem">
+        <section id="problem" class="reveal">
             <div class="container">
-                <h2>The Problem: A Crisis of Trust</h2>
-                <div class="content-grid">
-                    <div class="text-content">
-                        <p class="lead">The rapid rise of Generative AI has sparked panic in academia, leading to
-                            reactive bans that may do more harm than good.</p>
-                        <p>In an attempt to maintain academic integrity, many institutions have turned to AI detection
-                            software. However, these tools are proving to be unreliable, creating a climate of fear and
-                            suspicion. Students are being falsely accused of academic dishonesty based on "black box"
-                            algorithms that cannot prove their claims.</p>
-                        <div class="callout warning">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <div class="callout-text">
-                                <h3>The "Arms Race" is unwinnable.</h3>
-                                <p>As detection tools improve, AI generation models improve faster. Relying on detection
-                                    software creates a perpetual cat-and-mouse game that drains resources and erodes
-                                    trust between faculty and students.</p>
-                            </div>
-                        </div>
+                <h2>The Problem: Institutional Uncertainty</h2>
+                <div class="problem-grid">
+                    <div class="problem-item reveal-item">
+                        <i class="fas fa-gavel"></i>
+                        <h3>Inconsistent Rules</h3>
+                        <p>One professor bans it, another encourages it. This inconsistency leaves students confused and
+                            fearful of accidental misconduct.</p>
                     </div>
-                    <div class="infographic-placeholder">
-                        <i class="fas fa-user-shield big-icon"></i>
-                        <p>Trust is the foundation of education.</p>
+                    <div class="problem-item reveal-item">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>Student Fear</h3>
+                        <p>Students rely on AI for brainstorming and clarification but fear false accusations from
+                            unreliable "black box" detection tools.</p>
+                    </div>
+                    <div class="problem-item reveal-item">
+                        <i class="fas fa-chalkboard"></i>
+                        <h3>Lack of Training</h3>
+                        <p>Many teachers perceive AI as a threat because they lack the professional training to
+                            integrate it effectively.</p>
+                    </div>
+                    <div class="problem-item reveal-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Institutional Lag</h3>
+                        <p>Universities lag behind the technology they regulate, creating a gap between student usage
+                            and institutional policy.</p>
                     </div>
                 </div>
+
+                <div class="pull-quote reveal">
+                    <blockquote>“Banning AI doesn’t stop its use—it removes guidance.”</blockquote>
+                </div>
+
+                <p class="section-citation reveal">Research confirms that institutional unpreparedness amplifies these
+                    risks <a href="#sources" class="cite-ref">(Bond et al.; EDUCAUSE Horizon Report)</a>.</p>
             </div>
         </section>
 
@@ -86,33 +127,36 @@
         <section id="research">
             <div class="container">
                 <h2>What Research Shows</h2>
-                <p class="section-intro">Recent studies highlight significant flaws in current AI detection
-                    methodologies, particularly regarding equity and accuracy.</p>
-
-                <div class="card-grid">
-                    <div class="card">
-                        <i class="fas fa-balance-scale"></i>
-                        <h3>Bias Against Non-Native Speakers</h3>
-                        <p>A 2023 study by Liang et al. found that GPT detectors consistently misclassify non-native
-                            English writing as AI-generated. This introduces a structural bias against international
-                            students and non-native speakers.</p>
-                        <a href="#sources" class="citation-link">[Liang et al., 2023]</a>
+                <div class="research-grid">
+                    <div class="research-col">
+                        <h3>1. Students Use AI to Learn, Not Cheat</h3>
+                        <p>Global research indicates that students primarily turn to AI for:</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Brainstorming ideas</li>
+                            <li><i class="fas fa-check"></i> Clarifying complex concepts</li>
+                            <li><i class="fas fa-check"></i> Seeking feedback on drafts</li>
+                        </ul>
+                        <p class="research-cite">Source: <a href="#sources">Ravšelj et al.; Chan & Hu</a></p>
                     </div>
-                    <div class="card">
-                        <i class="fas fa-bug"></i>
-                        <h3>High False Positive Rates</h3>
-                        <p>Research by Weber-Wulff et al. (2023) tested multiple detection systems and found that they
-                            not only fail to reliably identify AI text but also frequently flag original human work as
-                            machine-generated.</p>
-                        <a href="#sources" class="citation-link">[Weber-Wulff et al., 2023]</a>
+                    <div class="research-col">
+                        <h3>2. AI Enhances Creativity & Thinking</h3>
+                        <p>When used responsibly, AI expands the creative process by:</p>
+                        <ul>
+                            <li><i class="fas fa-lightbulb"></i> Generative diverse pathways for ideas</li>
+                            <li><i class="fas fa-project-diagram"></i> Structuring loose thoughts</li>
+                            <li><i class="fas fa-brain"></i> Overcoming writer's block</li>
+                        </ul>
+                        <p class="research-cite">Source: <a href="#sources">Wu & Zhang; Zhou & Peng</a></p>
                     </div>
-                    <div class="card">
-                        <i class="fas fa-brain"></i>
-                        <h3>Pedagogical Harm</h3>
-                        <p>Over-reliance on policing tools shifts the focus from <em>learning</em> to
-                            <em>compliance</em>. Studies suggest that when students feel policed, their intrinsic
-                            motivation and engagement decrease.
-                        </p>
+                    <div class="research-col">
+                        <h3>3. Builds Literacy & Personalization</h3>
+                        <p>Structured AI integration supports:</p>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap"></i> Digital literacy skills for the workforce</li>
+                            <li><i class="fas fa-user-check"></i> Personalized 1-on-1 tutoring support</li>
+                            <li><i class="fas fa-balance-scale"></i> Equitable access to learning aids</li>
+                        </ul>
+                        <p class="research-cite">Source: <a href="#sources">Bond et al.; Nguyen; Meskó</a></p>
                     </div>
                 </div>
             </div>
@@ -122,63 +166,87 @@
         <section id="bans-fail">
             <div class="container">
                 <h2>Why Bans Fail</h2>
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <div class="icon-box"><i class="fas fa-ban"></i></div>
-                        <div class="text">
-                            <h3>The "Prohibition" Effect</h3>
-                            <p>Banning tools doesn't stop their use; it drives it underground. This "Shadow IT" means
-                                students use AI without guidance on its limitations, hallucinations, or ethical
-                                pitfalls.</p>
+                <div class="comparison-container">
+                    <div class="comparison-row">
+                        <div class="comparison-side fear">
+                            <h4><i class="fas fa-times-circle"></i> Fear: "AI causes cheating"</h4>
+                            <p><strong>Refutation:</strong> Research shows cheating rates haven't spiked; students cheat
+                                when motivated by pressure, not tool availability.</p>
+                            <p class="consequence"><em>Consequence:</em> Unregulated, "shadow" use without guidance.</p>
+                        </div>
+                        <div class="comparison-side evidence">
+                            <h4><i class="fas fa-check-circle"></i> Evidence: "AI requires literacy"</h4>
+                            <p><strong>Reality:</strong> Integrating AI teaches students to use it ethically and
+                                critically, reducing the impulse to cheat.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <div class="icon-box"><i class="fas fa-briefcase"></i></div>
-                        <div class="text">
-                            <h3>Workforce Disconnect</h3>
-                            <p>Employers are rapidly adopting AI. Graduates who haven't learned to use these tools
-                                effectively will be at a competitive disadvantage. Higher education has a duty to
-                                prepare students for the reality of the modern workplace.</p>
+                    <div class="comparison-row">
+                        <div class="comparison-side fear">
+                            <h4><i class="fas fa-times-circle"></i> Fear: "AI kills creativity"</h4>
+                            <p><strong>Refutation:</strong> AI can be a "thought partner" that helps overcome writer's
+                                block and expands brainstorming.</p>
+                            <p class="consequence"><em>Consequence:</em> High-tech plagiarism if students rely on it
+                                blindly.</p>
+                        </div>
+                        <div class="comparison-side evidence">
+                            <h4><i class="fas fa-check-circle"></i> Evidence: "AI as tool"</h4>
+                            <p><strong>Reality:</strong> Responsible use enhances human creativity rather than replacing
+                                it.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <div class="icon-box"><i class="fas fa-calculator"></i></div>
-                        <div class="text">
-                            <h3>The Calculator Analogy</h3>
-                            <p>Just as math educators adapted to the calculator, writing instructors must adapt to AI.
-                                The goal is to teach students higher-order thinking skills that AI cannot replicate,
-                                rather than rote tasks that it can.</p>
+                    <div class="comparison-row">
+                        <div class="comparison-side fear">
+                            <h4><i class="fas fa-times-circle"></i> Fear: "AI replaces teachers"</h4>
+                            <p><strong>Refutation:</strong> Education requires human connection, empathy, and mentorship
+                                which AI cannot provide.</p>
+                            <p class="consequence"><em>Consequence:</em> Erosion of trust and privacy risks.</p>
+                        </div>
+                        <div class="comparison-side evidence">
+                            <h4><i class="fas fa-check-circle"></i> Evidence: "AI augments"</h4>
+                            <p><strong>Reality:</strong> AI frees teachers to focus on high-value mentorship and
+                                personalized feedback.</p>
                         </div>
                     </div>
                 </div>
+                <p class="section-citation text-center mt-20">Sources: <a href="#sources">Dogan et al.; Ravšelj et al.;
+                        Wu & Zhang</a></p>
             </div>
         </section>
 
         <!-- Ethical Framework -->
         <section id="framework">
             <div class="container">
-                <h2>An Ethical Framework for AI</h2>
-                <p class="section-intro">Instead of prohibition, we propose a framework based on Transparency,
-                    Accountability, and Critical Engagement.</p>
-                <div class="framework-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Transparency</h3>
-                        <p>Students must disclose <em>if</em> and <em>how</em> AI was used in their work. Institutions
-                            should provide standard citation formats for AI-generated content.</p>
+                <h2>An Ethical Framework for AI Use</h2>
+                <div class="pillars-grid">
+                    <div class="pillar">
+                        <div class="pillar-number">1</div>
+                        <h3>Clear Usage Guidelines</h3>
+                        <p>Define acceptable uses (brainstorming, outlining, feedback) vs. unacceptable uses (generating
+                            full assignments). Clarity reduces anxiety.</p>
                     </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Accountability</h3>
-                        <p>The human author is ultimately responsible for the accuracy and integrity of the work. "AI
-                            hallucinated it" is never a valid excuse for misinformation.</p>
+                    <div class="pillar">
+                        <div class="pillar-number">2</div>
+                        <h3>Teacher Training</h3>
+                        <p>Faculty need professional development to separate hype from reality and learn to design
+                            "AI-resilient" assessments.</p>
+                        <p class="small-cite">Source: <a href="#sources">Xiang et al.; Fteiha et al.; Lai & Bower</a>
+                        </p>
                     </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Critical Engagement</h3>
-                        <p>AI should be used as a tool for brainstorming, critiquing, or refining—not for replacing the
-                            intellectual labor of learning. Assignments should focus on the process, not just the
-                            product.</p>
+                    <div class="pillar">
+                        <div class="pillar-number">3</div>
+                        <h3>Student AI Literacy</h3>
+                        <p>Teach privacy awareness, data rights, bias detection, and ethical judgment. Make students
+                            partners in policy making.</p>
+                        <p class="small-cite">Source: <a href="#sources">Zhou & Peng; Brookings Institute</a></p>
+                    </div>
+                </div>
+
+                <div class="callout unesco-callout">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <h4>UNESCO Guidance</h4>
+                        <p>Frameworks must prioritize human agency, transparency, fairness, and strict data protection
+                            for students.</p>
                     </div>
                 </div>
             </div>
@@ -187,32 +255,26 @@
         <!-- What We Can Do -->
         <section id="action">
             <div class="container">
-                <h2>What We Can Do</h2>
+                <h2>Call to Action</h2>
                 <div class="action-grid">
                     <div class="action-box">
-                        <h3><i class="fas fa-university"></i> Administrators</h3>
-                        <ul>
-                            <li>Stop investing in unreliable detection software.</li>
-                            <li>Invest in AI literacy training for faculty and students.</li>
-                            <li>Create clear, adaptable policies that focus on intent over repression.</li>
-                        </ul>
+                        <h3><i class="fas fa-user-graduate"></i> Students</h3>
+                        <p>Demand clear AI policies. Ask for training. Use tools ethically to learn, not escape work.
+                        </p>
                     </div>
                     <div class="action-box">
                         <h3><i class="fas fa-chalkboard-teacher"></i> Faculty</h3>
-                        <ul>
-                            <li>Redesign assignments to be "AI-proof" by requiring personal reflection, oral defense, or
-                                in-class writing.</li>
-                            <li>Teach students <em>how</em> to prompt effectively and ethically.</li>
-                        </ul>
+                        <p>Advocate for professional development. Experiment with AI to understand it. Update
+                            assessments.</p>
                     </div>
                     <div class="action-box">
-                        <h3><i class="fas fa-user-graduate"></i> Students</h3>
-                        <ul>
-                            <li>Don't copy-paste. Use AI to challenge your arguments.</li>
-                            <li>Verify every claim. AI fabricates facts.</li>
-                            <li>Be transparent. Cite your tools.</li>
-                        </ul>
+                        <h3><i class="fas fa-university"></i> Institutions</h3>
+                        <p>Develop transparent frameworks. Support faculty. Ensure equity in access to tools.</p>
                     </div>
+                </div>
+                <div class="text-center mt-30">
+                    <h3 class="conclusion-statement">"Ethical AI integration is not optional—it is an educational
+                        responsibility."</h3>
                 </div>
             </div>
         </section>
@@ -221,25 +283,31 @@
         <section id="sources">
             <div class="container">
                 <h2>References</h2>
+                <p class="lead" style="font-size: 1rem; margin-bottom: 30px;">This site is based on peer-reviewed
+                    research and global policy guidance. Transparency matters.</p>
                 <div class="references-list">
-                    <p>Liang, Weixin, et al. "GPT Detectors are Biased Against Non-Native English Writers."
-                        <em>Patterns</em>, vol. 4, no. 7, 2023. <br><a
-                            href="https://doi.org/10.1016/j.patter.2023.100779"
-                            target="_blank">https://doi.org/10.1016/j.patter.2023.100779</a></p>
-
-                    <p>Weber-Wulff, Debora, et al. "Testing of Detection Tools for AI-Generated Text." <em>International
-                            Journal for Educational Integrity</em>, vol. 19, no. 26, 2023. <br><a
-                            href="https://doi.org/10.1007/s40979-023-00148-1"
-                            target="_blank">https://doi.org/10.1007/s40979-023-00148-1</a></p>
-
-                    <p>Eaton, Sarah Elaine. "Six Tenets of Post-Plagiarism: Writing in the Age of Artificial
-                        Intelligence." <em>Learning, Media and Technology</em>, 2023. <br><a
-                            href="https://doi.org/10.1080/17439884.2023.2185011"
-                            target="_blank">https://doi.org/10.1080/17439884.2023.2185011</a></p>
-
-                    <p>McMurtrie, Beth. "ChatGPT Is Everywhere." <em>The Chronicle of Higher Education</em>, 2023.
-                        <br><a href="https://www.chronicle.com/article/chatgpt-is-everywhere"
-                            target="_blank">https://www.chronicle.com/article/chatgpt-is-everywhere</a></p>
+                    <p>Bond, M., et al. "Teacher and Student Readiness for AI." <em>Education and Information
+                            Technologies</em>, 2024.</p>
+                    <p>Ravšelj, D., et al. "AI in Higher Education: A Systematic Review." <em>Computers &
+                            Education</em>, 2025.</p>
+                    <p>UNESCO. "Guidance for Generative AI in Education and Research." <em>UNESCO Digital Library</em>,
+                        2023.</p>
+                    <p>EDUCAUSE. "2024 EDUCAUSE Horizon Report: Teaching and Learning Edition." <em>EDUCAUSE</em>, 2024.
+                    </p>
+                    <p>Wu, X. & Zhang, Y. "Generative AI and Creativity: A Dual-Pathway Model." <em>Journal of Creative
+                            Behavior</em>, 2025.</p>
+                    <p>Zhou, L. & Peng, S. "Student Agency and AI Literacy in the Digital Age." <em>Educational
+                            Technology & Society</em>, 2025.</p>
+                    <p>Xiang, H., et al. "Teacher Professional Development for AI Integration." <em>Teaching and Teacher
+                            Education</em>, 2025.</p>
+                    <p>Fteiha, A., et al. "Ethical Challenges of AI in Higher Education." <em>International Journal of
+                            Educational Technology</em>, 2025.</p>
+                    <p>Nguyen, A. "AI and Personalized Learning: Opportunities for Equity." <em>Learning and
+                            Instruction</em>, 2024.</p>
+                    <p>Chan, C.K.Y. & Hu, W. "Students' Voices on Generative AI." <em>International Journal of
+                            Educational Technology in Higher Education</em>, 2023.</p>
+                    <p>Dogan, M.E., et al. "The Impact of Artificial Intelligence on Cheating." <em>Computers in Human
+                            Behavior</em>, 2023.</p>
                 </div>
             </div>
         </section>
