@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (targetElement) {
                 // Account for fixed header height
-                const headerHeight = document.querySelector('#main-header').offsetHeight;
+                const header = document.querySelector('header');
+                const headerHeight = header ? header.offsetHeight : 0;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 
