@@ -19,6 +19,18 @@
 <body>
     <canvas id="neural-bg"></canvas>
 
+    <!-- Floating Geometric Shapes -->
+    <div class="floating-shapes">
+        <div class="shape shape-hexagon shape-1"></div>
+        <div class="shape shape-circle shape-2"></div>
+        <div class="shape shape-diamond shape-3"></div>
+        <div class="shape shape-triangle shape-4"></div>
+        <div class="shape shape-ring shape-5"></div>
+        <div class="shape shape-dots shape-6"></div>
+        <div class="shape shape-circle shape-7"></div>
+        <div class="shape shape-hexagon shape-8"></div>
+    </div>
+
     <header>
         <div class="container header-content">
             <div class="logo">
@@ -45,9 +57,58 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
+            <!-- Gradient Orbs -->
+            <div class="gradient-orb gradient-orb-1"></div>
+            <div class="gradient-orb gradient-orb-2"></div>
+            <div class="gradient-orb gradient-orb-3"></div>
+
             <div class="container hero-content fade-in-up">
 
-                <h1 class="main-headline fade-in-up delay-200"><span id="typewriter-text"></span><span
+                <!-- Hero SVG Graphic -->
+                <div class="hero-svg-icon fade-in-up delay-200">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#2563EB" />
+                                <stop offset="100%" style="stop-color:#7C3AED" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Central Brain Node -->
+                        <circle cx="100" cy="100" r="25" fill="url(#heroGradient)" opacity="0.9" />
+                        <circle cx="100" cy="100" r="35" fill="none" stroke="url(#heroGradient)" stroke-width="2"
+                            opacity="0.5" />
+                        <circle cx="100" cy="100" r="50" fill="none" stroke="url(#heroGradient)" stroke-width="1"
+                            opacity="0.3" />
+
+                        <!-- Connected Nodes -->
+                        <circle cx="50" cy="60" r="12" fill="#2563EB" opacity="0.8" />
+                        <circle cx="150" cy="60" r="12" fill="#7C3AED" opacity="0.8" />
+                        <circle cx="40" cy="120" r="10" fill="#14B8A6" opacity="0.7" />
+                        <circle cx="160" cy="120" r="10" fill="#2563EB" opacity="0.7" />
+                        <circle cx="70" cy="160" r="8" fill="#7C3AED" opacity="0.6" />
+                        <circle cx="130" cy="160" r="8" fill="#14B8A6" opacity="0.6" />
+                        <circle cx="100" cy="35" r="10" fill="#2563EB" opacity="0.7" />
+                        <circle cx="100" cy="165" r="10" fill="#7C3AED" opacity="0.7" />
+
+                        <!-- Connection Lines -->
+                        <line x1="100" y1="75" x2="50" y2="60" stroke="#2563EB" stroke-width="2" opacity="0.4" />
+                        <line x1="100" y1="75" x2="150" y2="60" stroke="#7C3AED" stroke-width="2" opacity="0.4" />
+                        <line x1="75" y1="100" x2="40" y2="120" stroke="#14B8A6" stroke-width="2" opacity="0.4" />
+                        <line x1="125" y1="100" x2="160" y2="120" stroke="#2563EB" stroke-width="2" opacity="0.4" />
+                        <line x1="85" y1="125" x2="70" y2="160" stroke="#7C3AED" stroke-width="2" opacity="0.4" />
+                        <line x1="115" y1="125" x2="130" y2="160" stroke="#14B8A6" stroke-width="2" opacity="0.4" />
+                        <line x1="100" y1="65" x2="100" y2="45" stroke="#2563EB" stroke-width="2" opacity="0.4" />
+                        <line x1="100" y1="135" x2="100" y2="155" stroke="#7C3AED" stroke-width="2" opacity="0.4" />
+
+                        <!-- Outer decorative dots -->
+                        <circle cx="25" cy="80" r="4" fill="#2563EB" opacity="0.4" />
+                        <circle cx="175" cy="80" r="4" fill="#7C3AED" opacity="0.4" />
+                        <circle cx="25" cy="140" r="3" fill="#14B8A6" opacity="0.4" />
+                        <circle cx="175" cy="140" r="3" fill="#2563EB" opacity="0.4" />
+                    </svg>
+                </div>
+
+                <h1 class="main-headline fade-in-up delay-200 glow-text"><span id="typewriter-text"></span><span
                         class="cursor">|</span></h1>
 
                 <p class="hero-claim fade-in-up delay-400">Higher education must evolve. <span
@@ -57,15 +118,15 @@
                 <div class="why-matters-hero fade-in-up delay-600">
                     <!-- Removed confusing System Status -->
                     <div class="matters-grid">
-                        <div class="matters-item tilt-card">
+                        <div class="matters-item tilt-card glow-card">
                             <i class="fas fa-users"></i>
                             <span>Students Adapting</span>
                         </div>
-                        <div class="matters-item tilt-card">
+                        <div class="matters-item tilt-card glow-card">
                             <i class="fas fa-university"></i>
                             <span>Policies Lagging</span>
                         </div>
-                        <div class="matters-item tilt-card">
+                        <div class="matters-item tilt-card glow-card">
                             <i class="fas fa-exclamation-triangle"></i>
                             <span>Risks Escalating</span>
                         </div>
@@ -73,14 +134,61 @@
                 </div>
 
                 <div class="hero-actions fade-in-up delay-800">
-                    <a href="#solution" class="btn btn-primary scroll-cue">Explore the Framework <i
+                    <a href="#solution" class="btn btn-primary scroll-cue shimmer">Explore the Framework <i
                             class="fas fa-arrow-down"></i></a>
+                </div>
+            </div>
+
+            <!-- Hero Visual Accent Dots -->
+            <div class="hero-visual-accent">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </section>
+
+        <!-- Wave Divider -->
+        <div class="wave-divider bottom blue">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+        </div>
+
+        <!-- Key Points Section -->
+        <section id="key-points" class="key-points-section reveal">
+            <div class="container">
+                <h2>Why This Matters</h2>
+                <div class="key-points-grid">
+                    <div class="key-point-card glow-card">
+                        <div class="key-point-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Student Success</h3>
+                        <p>Students who receive proper AI literacy training report higher confidence in academic work
+                            and better understanding of ethical boundaries.</p>
+                    </div>
+                    <div class="key-point-card glow-card">
+                        <div class="key-point-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Academic Integrity</h3>
+                        <p>Clear guidelines reduce ambiguity about acceptable use, decreasing unintentional violations
+                            and fostering trust between students and faculty.</p>
+                    </div>
+                    <div class="key-point-card glow-card">
+                        <div class="key-point-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Workforce Readiness</h3>
+                        <p>AI skills are now essential in most industries. Ethical AI education prepares students for
+                            real-world professional environments.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- The Problem -->
-        <section id="problem" class="reveal">
+        <section id="problem" class="reveal section-accent-bg">
             <div class="container">
                 <h2>The Institutional Gap</h2>
                 <p class="section-lead">While students rapidly adopt generative AI tools, academic institutions are
@@ -88,19 +196,19 @@
                 </p>
 
                 <div class="problem-grid">
-                    <div class="problem-item reveal-item">
+                    <div class="problem-item reveal-item glow-card gradient-border">
                         <i class="fas fa-ban"></i>
                         <h3>Ineffective Bans</h3>
                         <p>Restrictive policies fail to stop usage and instead drive students to use unvetted tools
                             without guidance.</p>
                     </div>
-                    <div class="problem-item reveal-item">
+                    <div class="problem-item reveal-item glow-card gradient-border">
                         <i class="fas fa-chalkboard-teacher"></i>
                         <h3>Lack of Training</h3>
                         <p>Faculty and staff lack proper training on AI tools, making it difficult to guide students or
                             update teaching methods effectively.</p>
                     </div>
-                    <div class="problem-item reveal-item">
+                    <div class="problem-item reveal-item glow-card gradient-border">
                         <i class="fas fa-clock"></i>
                         <h3>Institutional Lag</h3>
                         <p>Universities lag behind the technology they regulate, creating a gap between student usage
@@ -117,12 +225,28 @@
             </div>
         </section>
 
+        <!-- Wave Divider -->
+        <div class="wave-divider bottom purple">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                    class="shape-fill" opacity=".25"></path>
+                <path
+                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                    class="shape-fill" opacity=".5"></path>
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
         <!-- What Research Shows -->
         <section id="research">
             <div class="container">
                 <h2>What Research Shows</h2>
                 <div class="research-grid">
-                    <div class="research-col">
+                    <div class="research-col glow-card gradient-border">
                         <h3>1. Students Use AI to Learn, Not Cheat</h3>
                         <p>Global research indicates that students primarily turn to AI for:</p>
                         <ul>
@@ -132,7 +256,7 @@
                         </ul>
                         <p class="research-cite">Source: <a href="#sources">Ravšelj et al.; Chan & Hu</a></p>
                     </div>
-                    <div class="research-col">
+                    <div class="research-col glow-card gradient-border">
                         <h3>2. AI Enhances Creativity & Thinking</h3>
                         <p>When used responsibly, AI expands the creative process by:</p>
                         <ul>
@@ -142,7 +266,7 @@
                         </ul>
                         <p class="research-cite">Source: <a href="#sources">Wu & Zhang; Zhou & Peng</a></p>
                     </div>
-                    <div class="research-col">
+                    <div class="research-col glow-card gradient-border">
                         <h3>3. Builds Literacy & Personalization</h3>
                         <p>Structured AI integration supports:</p>
                         <ul>
@@ -212,7 +336,7 @@
             <div class="container" id="framework">
                 <h2>An Ethical Framework for Integration</h2>
                 <div class="pillars-grid">
-                    <div class="pillar-card reveal-item">
+                    <div class="pillar-card reveal-item glow-card">
                         <span class="pillar-number">01</span>
                         <i class="fas fa-file-contract pillar-icon"></i>
                         <h3>Clear Guidelines</h3>
@@ -224,7 +348,7 @@
                             <li>❌ Bypassing learning objectives</li>
                         </ul>
                     </div>
-                    <div class="pillar-card reveal-item">
+                    <div class="pillar-card reveal-item glow-card">
                         <span class="pillar-number">02</span>
                         <i class="fas fa-chalkboard-teacher pillar-icon"></i>
                         <h3>Teacher Training</h3>
@@ -235,7 +359,7 @@
                             <li>Handling AI ethics in class</li>
                         </ul>
                     </div>
-                    <div class="pillar-card reveal-item">
+                    <div class="pillar-card reveal-item glow-card">
                         <span class="pillar-number">03</span>
                         <i class="fas fa-user-graduate pillar-icon"></i>
                         <h3>Student Literacy</h3>
@@ -259,13 +383,23 @@
             </div>
         </section>
 
+        <!-- Wave Divider -->
+        <div class="wave-divider bottom blue">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
         <!-- Call to Action -->
-        <section id="action" class="reveal">
+        <section id="action" class="reveal section-accent-bg">
             <div class="container">
                 <h2>What We Can Do</h2>
             </div>
             <div class="action-grid">
-                <div class="action-box interactive-card">
+                <div class="action-box interactive-card glow-card">
                     <div class="action-icon"><i class="fas fa-user-graduate"></i></div>
                     <h3>Students</h3>
                     <ul>
@@ -275,7 +409,7 @@
                         <li>Report unclear guidelines to student government</li>
                     </ul>
                 </div>
-                <div class="action-box interactive-card">
+                <div class="action-box interactive-card glow-card">
                     <div class="action-icon"><i class="fas fa-chalkboard-teacher"></i></div>
                     <h3>Faculty</h3>
                     <ul>
@@ -285,7 +419,7 @@
                         <li>Share best practices with colleagues</li>
                     </ul>
                 </div>
-                <div class="action-box interactive-card">
+                <div class="action-box interactive-card glow-card">
                     <div class="action-icon"><i class="fas fa-university"></i></div>
                     <h3>Institutions</h3>
                     <ul>

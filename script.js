@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let width, height;
     let particles = [];
+    let mouseX = 0;
+    let mouseY = 0;
 
     function resize() {
         width = canvas.width = window.innerWidth;
@@ -68,15 +70,35 @@ document.addEventListener('DOMContentLoaded', () => {
         constructor() {
             this.x = Math.random() * width;
             this.y = Math.random() * height;
-            this.vx = (Math.random() - 0.5) * 0.3; // Slower movement
-            this.vy = (Math.random() - 0.5) * 0.3;
-            this.size = Math.random() * 2 + 1;
-            this.color = `rgba(37, 99, 235, ${Math.random() * 0.3})`; // Light Blue opacity
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.size = Math.random() * 3 + 1;
+            this.baseSize = this.size;
+            // Use varied colors for more visual interest
+            const colors = [
+                `rgba(37, 99, 235, ${Math.random() * 0.4 + 0.1})`,
+                `rgba(124, 58, 237, ${Math.random() * 0.3 + 0.1})`,
+                `rgba(20, 184, 166, ${Math.random() * 0.2 + 0.1})`
+            ];
+            this.color = colors[Math.floor(Math.random() * colors.length)];
+            this.pulseOffset = Math.random() * Math.PI * 2;
         }
 
         update() {
             this.x += this.vx;
             this.y += this.vy;
+
+            // Gentle pulse effect
+            this.size = this.baseSize + Math.sin(Date.now() * 0.002 + this.pulseOffset) * 0.5;
+
+            // Mouse interaction - particles gently move away from cursor
+            const dx = this.x - mouseX;
+            const dy = this.y - mouseY;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 150) {
+                this.x += dx * 0.01;
+                this.y += dy * 0.01;
+            }
 
             if (this.x < 0 || this.x > width) this.vx *= -1;
             if (this.y < 0 || this.y > height) this.vy *= -1;
@@ -92,7 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initParticles() {
         particles = [];
-        for (let i = 0; i < 40; i++) { // Fewer particles for cleaner look
+        // More particles for richer visual effect
+        const particleCount = Math.min(80, Math.floor((width * height) / 15000));
+        for (let i = 0; i < particleCount; i++) {
             particles.push(new Particle());
         }
     }
@@ -104,16 +128,20 @@ document.addEventListener('DOMContentLoaded', () => {
             p.update();
             p.draw();
 
-            // Connect close particles
+            // Connect close particles with gradient lines
             for (let j = index + 1; j < particles.length; j++) {
                 const p2 = particles[j];
                 const dx = p.x - p2.x;
                 const dy = p.y - p2.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < 150) {
-                    ctx.strokeStyle = `rgba(124, 58, 237, ${0.15 - (distance / 150) * 0.15})`; // Very subtle purple
-                    ctx.lineWidth = 0.5;
+                if (distance < 180) {
+                    const opacity = 0.2 - (distance / 180) * 0.2;
+                    const gradient = ctx.createLinearGradient(p.x, p.y, p2.x, p2.y);
+                    gradient.addColorStop(0, `rgba(37, 99, 235, ${opacity})`);
+                    gradient.addColorStop(1, `rgba(124, 58, 237, ${opacity})`);
+                    ctx.strokeStyle = gradient;
+                    ctx.lineWidth = 0.8;
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
@@ -125,10 +153,34 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animateParticles);
     }
 
+    // Track mouse position for particle interaction
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
     window.addEventListener('resize', resize);
     resize();
     initParticles();
     animateParticles();
+
+    // Parallax effect for floating shapes
+    window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset;
+        const shapes = document.querySelectorAll('.shape');
+
+        shapes.forEach((shape, index) => {
+            const speed = 0.1 + (index * 0.02);
+            shape.style.transform = `translateY(${scrollY * speed}px)`;
+        });
+
+        // Parallax for gradient orbs too
+        const orbs = document.querySelectorAll('.gradient-orb');
+        orbs.forEach((orb, index) => {
+            const speed = 0.05 + (index * 0.015);
+            orb.style.transform = `translateY(${scrollY * speed}px)`;
+        });
+    });
 
     // Typewriter Effect (Clean)
     const text = "Generative AI in Education.";
